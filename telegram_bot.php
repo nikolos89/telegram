@@ -12,8 +12,8 @@ require_once("telegram_bot_api.php");
 
 class TelegramBot{
 
-	protected $token = null; 
-	protected $bot_name = null;
+	protected $token = "598570912:AAH-WFkt5H5ueSkqahGMT6EHXLmZpqoZakA"; 
+	protected $bot_name = "@pogoda55_omsk_bot";
 	public    $api = null;
 	protected $result = null;
 	protected $commands = [
@@ -24,7 +24,7 @@ class TelegramBot{
 	 * HTTP proxy URI (not socks)
 	 * @example "tcp://122.183.137.190:8080"
 	 */
-	public    $proxy = "";
+	public    $proxy = "tcp://122.183.137.190:8080";
 
 	/**
 	 * Creates bot class
