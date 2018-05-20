@@ -40,4 +40,15 @@ function getUserRequest($text, $chat_id) {
   }
 }
 
+function requestToTelegram($data, $type = 'sendMessage') {
+  if( $curl = curl_init() ) {
+    curl_setopt($curl, CURLOPT_URL, API_URL . $type);
+    curl_setopt($curl, CURLOPT_RETURNTRANSFER, TRUE);
+    curl_setopt($curl, CURLOPT_POST, TRUE);
+    curl_setopt($curl, CURLOPT_POSTFIELDS, $data);
+    curl_exec($curl);
+    curl_close($curl);
+  }
+}
+
 ?>
