@@ -7,8 +7,8 @@
 //https://api.telegram.org/bot598570912:AAH-WFkt5H5ueSkqahGMT6EHXLmZpqoZakA/setWebhook?url=https://teleg123.herokuapp.com
 
 
-define('BOT_TOKEN', '598570912:AAH-WFkt5H5ueSkqahGMT6EHXLmZpqoZakA');
-define('API_URL', 'https://api.telegram.org/bot' . BOT_TOKEN . '/');
+//define('BOT_TOKEN', '598570912:AAH-WFkt5H5ueSkqahGMT6EHXLmZpqoZakA');
+//define('API_URL', 'https://api.telegram.org/bot' . BOT_TOKEN . '/');
 
 phpinfo();
 
