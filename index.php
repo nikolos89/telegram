@@ -3,7 +3,8 @@ $d = date('H') + 3;
 $i = date('i');
 $s = date('s');
 $r = ':';
-$dis = $d . $r. $i . $r . $s . date('d.m.Y')
+$rr = ' ';
+$dis = $d . $r. $i . $r . $s . $rr . date('d.m.Y')
 
 echo $dis;
 echo '<br/>';
