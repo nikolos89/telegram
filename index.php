@@ -1,3 +1,3 @@
 <?php
-echo 'Вы находитесь на сайте '.$_SERVER['HTTP_HOST'];
+echo rand(1,1000000000); 
 ?>
