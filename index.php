@@ -5,7 +5,7 @@ $s = date('s');
 $r = ':';
 $dis = $d . $r. $i . $r . $s . date('d.m.Y')
 
-echo ($dis);
+echo $dis;
 echo '<br/>';
 echo getenv('REMOTE_ADDR'); 
 echo '<br/>';
