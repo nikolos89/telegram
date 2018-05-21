@@ -1,71 +1,79 @@
-<?php
- 
-// Функция вывода формы ввода
-function show_form()
-{
-echo '<html>';
-echo '<head>';
-echo '<title>Калькулятор</title>';
-echo '</head>';
-echo '<body>';
-echo '<form action="#" method="post">';
-echo '<input type="text" name="a"/>';
- 
-echo '<input type="submit" name="oper" value= "+" />';
-echo '<input type="submit" name="oper" value= "-" />';
-echo '<input type="submit" name="oper" value= "*" />';
-echo '<input type="submit" name="oper" value= "/" />';
- 
-echo '<input type="text" name="b" />';
-echo '<input type="submit" value="=" />';
- 
-echo '</form>';
-echo '</body>';
-echo '</html>';
-}
- 
- 
- 
- 
-// Функция вывода результата.
-function show_result($a, $b , $oper) 
-{
- 
- $result = null;
- if ($oper == "+")       {  $result = $a + $b;  }
- else if ($oper == "-")  {  $result = $a - $b;  }
- else if ($oper == "*")  {  $result = $a * $b;  }
- else if ($oper == "/")  {  $result = $b != 0 ? $a / $b : "на ноль делить нельзя!"; }
-echo '<html>';
-echo '<head>';
-echo '<title>Сумматор</title>';
-echo '</head>';
-echo '<body>';
-echo '<form action="#" method="get">';
-echo '<input type = "text" name = "a" value = '.$a.'>';
-echo '<input type="submit" name="oper" value= "+" />';
-echo '<input type="submit" name="oper" value= "-" />';
-echo '<input type="submit" name="oper" value= "*" />';
-echo '<input type="submit" name="oper" value= "/" />';
- 
-echo '<input type = "text" name = "b" value = '.$b.'>';
-echo '<input type="submit" value="=" />';
-echo $result;
-echo '<br>';
-echo '<a href="sum1.php">Хочу продолжить вычисление</a>';
-echo '</p>';
-echo '</body>';
-echo '</html>';
-}
- 
-// Точка входа.
-// Показываем результат операции или форму ввода.
-if (!empty($_POST['oper']) && !empty($_POST['a']) && !empty($_POST['b']))
-{
-show_result($_POST['a'], $_POST['b'],$_POST['oper']);
-}
-else
-{
-show_form();
-}
-?>
+<HTML>
+<HEAD>
+<TITLE>Simple Calculator by Peter Rekdal Sunde</TITLE>
+</HEAD>
+<BODY bgcolor="#57738E">
+
+
+<p>&nbsp;</p>
+
+
+<p>&nbsp;</p>
+
+
+
+<p>&nbsp;</p>
+
+
+
+<p>&nbsp;</p>
+
+
+
+<p>&nbsp;</p>
+
+
+
+<p>&nbsp;</p>
+
+
+
+<p>&nbsp;</p>
+
+
+
+<p>&nbsp;</p>
+<div align="center">
+  <center>
+  <table border="0" width="966" height="203">
+    <tr>
+      <td width="966" height="1" bgcolor="#FFFFFF" align="center">
+        <p align="center"><font face="Verdana" size="1"><b>
+        <marquee>Download this code at <a href="http://www.planet-source-code.com">http://www.planet-source-code.com</a></marquee>
+        </b></font></td>
+    </tr>
+    <tr>
+      <td width="966" height="241" align="center">
+
+
+
+<FORM METHOD="post" ACTION="result.php">
+
+<P><font face="Verdana" size="2"><b>Calculation number 1: <INPUT TYPE="text" NAME="val1" SIZE=10></b></font></p>
+
+<P><font face="Verdana" size="2"><b>Calculation number 2: <INPUT TYPE="text" NAME="val2" SIZE=10></b></font></p>
+
+<p><font face="Verdana" size="2"><b>Calculation type:</b></font></p>
+
+<p><font face="Verdana" size="2"><b><input TYPE="radio" NAME="calc" VALUE="addisjon">
+add <input TYPE="radio" NAME="calc" VALUE="minus"> subtract <input TYPE="radio" NAME="calc" VALUE="ganger">
+multiply <input TYPE="radio" NAME="calc" VALUE="dele"> divide</b></font></p>
+
+<P><INPUT TYPE="submit" NAME="submit" VALUE="Do Calculation"></p>
+
+</FORM>
+   
+
+      </td>
+    </tr>
+    <tr>
+      <td width="966" height="1" bgcolor="#FFFFFF">
+        <p align="center"><font face="Verdana" size="1"><b>This script was
+        created by Peter Rekdal Sunde</b></font></td>
+    </tr>
+  </table>
+  </center>
+</div>
+
+</BODY>
+</HTML>
