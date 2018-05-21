@@ -1,6 +1,11 @@
 <?php
 $d = date('H') + 3;
-echo date('$d:i:s d.m.Y');
+$i = date('i');
+$s = date('s');
+$r = ':';
+$dis = $d . $r. $i . $r . $s . date('d.m.Y')
+
+echo ($dis);
 echo '<br/>';
 echo getenv('REMOTE_ADDR'); 
 echo '<br/>';
