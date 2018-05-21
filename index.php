@@ -1,12 +1,12 @@
 <?php
-$d = date('H') + 3;
-$i = date('i');
-$s = date('s');
-$r = ':';
-$rr = ' ';
-$dis = $d . $r. $i . $r . $s . $rr . date('d.m.Y')
-
-echo $dis;
+echo '
+<div id="time">
+        <?php echo date('H:i:s d.m.Y');?>
+    </div>
+    <script>
+        let time = new Date(document.getElementById('time').innerText);
+    </script>
+';
 echo '<br/>';
 echo getenv('REMOTE_ADDR'); 
 echo '<br/>';
